@@ -46,6 +46,9 @@ const App: React.FC = () => {
       complete.splice(destination.index, 0, add)
     };
 
+    complete.map((todo: Todo) => todo.isDone = true)
+    active.map((todo: Todo) => todo.isDone = false)
+    
     setCompletedTodos(complete);
     setTodos(active);
   };
